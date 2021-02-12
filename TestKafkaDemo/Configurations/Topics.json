@@ -1,8 +1,10 @@
-  [
+{
+  "Topics": [
     {
-      "name": "Inventory"
+      "Name": "Inventory"
     },
     {
-      "name": "Test"
+      "Name": "Test"
     }
-]
+  ]
+}

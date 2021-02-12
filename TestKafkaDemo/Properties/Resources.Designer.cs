@@ -86,5 +86,23 @@ namespace TestKafkaDemo.Properties {
                 return ResourceManager.GetString("KafkaInstructions", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to localhost:9092.
+        /// </summary>
+        internal static string KafkaServerUri {
+            get {
+                return ResourceManager.GetString("KafkaServerUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configurations\Topics.json.
+        /// </summary>
+        internal static string TopicConfigurationFile {
+            get {
+                return ResourceManager.GetString("TopicConfigurationFile", resourceCulture);
+            }
+        }
     }
 }

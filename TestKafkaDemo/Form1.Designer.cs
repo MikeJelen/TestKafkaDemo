@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.topicLabel = new System.Windows.Forms.Label();
             this.topicComboBox = new System.Windows.Forms.ComboBox();
             this.actionTabControl = new System.Windows.Forms.TabControl();
@@ -49,11 +50,13 @@
             this.installationInstructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kafkaInstructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.topicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actionTabControl.SuspendLayout();
             this.tabProduce.SuspendLayout();
             this.tabConsume.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.topicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // topicLabel
@@ -67,6 +70,7 @@
             // 
             // topicComboBox
             // 
+            this.topicComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.topicComboBox.FormattingEnabled = true;
             this.topicComboBox.Location = new System.Drawing.Point(55, 53);
             this.topicComboBox.Name = "topicComboBox";
@@ -97,12 +101,14 @@
             // 
             // produceButton
             // 
+            this.produceButton.Enabled = false;
             this.produceButton.Location = new System.Drawing.Point(640, 155);
             this.produceButton.Name = "produceButton";
             this.produceButton.Size = new System.Drawing.Size(112, 23);
             this.produceButton.TabIndex = 1;
-            this.produceButton.Text = "Post";
+            this.produceButton.Text = "Send";
             this.produceButton.UseVisualStyleBackColor = true;
+            this.produceButton.Click += new System.EventHandler(this.produceButton_Click);
             // 
             // produceTextBox
             // 
@@ -112,6 +118,7 @@
             this.produceTextBox.Name = "produceTextBox";
             this.produceTextBox.Size = new System.Drawing.Size(743, 141);
             this.produceTextBox.TabIndex = 0;
+            this.produceTextBox.TextChanged += new System.EventHandler(this.produceTextBox_TextChanged);
             // 
             // tabConsume
             // 
@@ -127,19 +134,21 @@
             // 
             // consumeButton
             // 
-            this.consumeButton.Location = new System.Drawing.Point(647, 162);
+            this.consumeButton.Location = new System.Drawing.Point(640, 155);
             this.consumeButton.Name = "consumeButton";
             this.consumeButton.Size = new System.Drawing.Size(112, 23);
             this.consumeButton.TabIndex = 3;
-            this.consumeButton.Text = "Get";
+            this.consumeButton.Text = "Receive";
             this.consumeButton.UseVisualStyleBackColor = true;
+            this.consumeButton.Click += new System.EventHandler(this.consumeButton_Click);
             // 
             // consumeTextBox
             // 
             this.consumeTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.consumeTextBox.Location = new System.Drawing.Point(16, 14);
+            this.consumeTextBox.Location = new System.Drawing.Point(9, 7);
             this.consumeTextBox.Multiline = true;
             this.consumeTextBox.Name = "consumeTextBox";
+            this.consumeTextBox.ReadOnly = true;
             this.consumeTextBox.Size = new System.Drawing.Size(743, 141);
             this.consumeTextBox.TabIndex = 2;
             // 
@@ -262,6 +271,7 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.topicBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +300,7 @@
         private System.Windows.Forms.ToolStripMenuItem topicListToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem installationInstructionsToolStripMenuItem;
+        private System.Windows.Forms.BindingSource topicBindingSource;
     }
 }
 

@@ -126,4 +126,10 @@
   <data name="KafkaInstructions" xml:space="preserve">
     <value>https://kafka.apache.org/quickstart</value>
   </data>
+  <data name="KafkaServerUri" xml:space="preserve">
+    <value>localhost:9092</value>
+  </data>
+  <data name="TopicConfigurationFile" xml:space="preserve">
+    <value>Configurations\Topics.json</value>
+  </data>
 </root>
