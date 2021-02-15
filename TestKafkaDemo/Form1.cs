@@ -84,12 +84,13 @@ namespace TestKafkaDemo
 
         #region Helper Functions
 
-        private string ConsumeMessage(string topic)
+        private static string ConsumeMessage(string topic)
         {
-            return MessageHandler.ConsumeMessage(Properties.Resources.KafkaServerUri, topic);
+            return MessageHandler.ConsumeMessage(
+                Properties.Resources.KafkaServerUri, topic, Properties.Resources.KafkaGroupId);
         }
 
-        private async Task ProduceMessage(string topic, string message)
+        private static async Task ProduceMessage(string topic, string message)
         {
             await MessageHandler.ProduceMessage(Properties.Resources.KafkaServerUri, topic, message);
         }

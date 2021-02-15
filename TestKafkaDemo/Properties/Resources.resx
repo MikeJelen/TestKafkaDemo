@@ -123,6 +123,9 @@
   <data name="InstallationInstructions" xml:space="preserve">
     <value>https://hadoan.medium.com/install-kafka-in-windows-10-by-chocolately-</value>
   </data>
+  <data name="KafkaGroupId" xml:space="preserve">
+    <value>Test-Group</value>
+  </data>
   <data name="KafkaInstructions" xml:space="preserve">
     <value>https://kafka.apache.org/quickstart</value>
   </data>

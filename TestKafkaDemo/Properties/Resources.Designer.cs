@@ -79,6 +79,15 @@ namespace TestKafkaDemo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Test-Group.
+        /// </summary>
+        internal static string KafkaGroupId {
+            get {
+                return ResourceManager.GetString("KafkaGroupId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://kafka.apache.org/quickstart.
         /// </summary>
         internal static string KafkaInstructions {

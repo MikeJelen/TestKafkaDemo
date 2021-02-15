@@ -16,11 +16,11 @@ namespace TestKafka
             }
         }
 
-        public static string ConsumeMessage(string serverUri, string topic)
+        public static string ConsumeMessage(string serverUri, string topic, string groupId)
         {
             var config = new ConsumerConfig
             {
-                GroupId = "Test-Group",
+                GroupId = groupId,
                 BootstrapServers = serverUri,
                 EnableAutoCommit = false,
                 StatisticsIntervalMs = 5000,
